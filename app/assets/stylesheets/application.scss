@@ -48,7 +48,16 @@
       background-position: center center;
       background-repeat: no-repeat;
       background-size: cover;
-      height: 385px;
+      height: 410px;
+    }
+
+    #jumbotronabout {
+
+      background-image: asset-url('imagen2.jpg');
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 350px;
     }
 
     html, body{
