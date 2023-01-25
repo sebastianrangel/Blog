@@ -10,13 +10,18 @@
         <div class="card-body">
           <div class="card-text text-start"><%= simple_format(@article.description) %></div>
           <%= link_to "Edit", edit_article_path(@article), class: "btn btn-outline-info" %> 
-          <%= link_to "Delete", article_path(@article), class: "btn btn-outline-danger", data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
+          <%= button_to "Delete", article_path(@article), class: "btn btn-outline-danger",  method: :delete, form: {data: {turbo_confirm: "Are you sure?"}} %>
         </div>
         <div class="card-footer text-muted">
           <small>Created <%= time_ago_in_words(@article.created_at)%> ago,
           edited <%=time_ago_in_words(@article.updated_at) %> ago </small>
         </div >
+    </div>
+			<div class="mb-3">
+			<%= link_to '[ Cancel and return to articles listing ]', articles_path, class: "d-flex justify-content-center mb-3 text-success" %>
+		</div>
       </div>
       </div>
     </div>
   </div>
+  
