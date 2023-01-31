@@ -7,5 +7,9 @@
 
 <h3 class="text-center mt-4 text-black", id="titulo3">Blogs</h3>	
 
+<div class="apple_pagination mb-4">
+     <%= will_paginate @articles, :container => false %>
+</div>
+
 
 <%= render 'articles/article' %>

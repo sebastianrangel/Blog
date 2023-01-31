@@ -1,3 +1,11 @@
 <h1 class="text-center mt-4">Listing of all blogs</h1>
 
+<div class="apple_pagination mb-4">
+     <%= will_paginate @articles, :container => false %>
+</div>
+
 <%= render 'article'%>
+
+<div class="apple_pagination mb-4">
+     <%= will_paginate @articles, :container => false %>
+</div>
