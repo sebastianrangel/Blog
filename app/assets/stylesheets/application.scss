@@ -60,6 +60,11 @@
       height: 350px;
     }
 
+    button[type="submit"] {
+      border: none;
+      background-color: transparent;
+    }
+
     html, body{
 
       height: 100%;
@@ -126,7 +131,11 @@
         border-radius: 1em;
         text-shadow: rgba(255, 255, 255, 0.8) 1px 1px 1px; }
       .apple_pagination a {
-        text-decoration: none;
-        color: black; }
-        .apple_pagination a:hover, .apple_pagination a:focus {
-          text-decoration: underline; }
+      text-decoration: none;
+      color: black; }
+      .apple_pagination a:hover, .apple_pagination a:focus {
+      text-decoration: underline; }
+
+
+
+        
