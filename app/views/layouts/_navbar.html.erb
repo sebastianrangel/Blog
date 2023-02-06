@@ -19,22 +19,24 @@
           <a class="dropdown-item" href="#">Something else here</a>
         </div>
         </li>
-        <% if logged_in? %>
-          <li class="nav-item text-decoration-none">
-              <%= button_to 'Logout', logout_path, class: "nav-link" , method: :delete %>
-          </li>
-          <li class="nav-item">
-            <%= link_to current_user.username, user_path(current_user), class: "nav-link"%>
-          </li>
-         <% else %>
-          <li class="nav-item">
-            <%= link_to 'Log in', login_path, class: "nav-link"%>
-          </li>
-          <li class="nav-item">
-            <%= link_to 'Sign up', signup_path, class: "nav-link"%>
-          </li>
-        <% end %>
       </ul>
+
+      <% if logged_in? %>
+      <span class="nav-item text-decoration-none">
+              <%= button_to 'Logout', logout_path, class: "nav-link" , method: :delete %>
+      </span>
+      <span class="nav-item">
+            <%= link_to current_user.username, user_path(current_user), class: "nav-link"%>
+      </span>
+      <% else %>
+      <span class="nav-item">
+            <%= link_to 'Sign up', signup_path, class: "nav-link"%>
+      </span>
+      <span class="nav-item">
+            <%= link_to 'Log in', login_path, class: "nav-link"%>
+      </span>
+      <% end %>
+
       <form class="d-flex">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Search</button>
