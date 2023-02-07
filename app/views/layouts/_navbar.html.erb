@@ -34,7 +34,7 @@
           <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
             <%= link_to "View your profile", user_path(current_user), class: "dropdown-item" %>
             <%= link_to "Edit your profile", edit_user_path(current_user), class: "dropdown-item" %>
-
+            <%= button_to "Delete Profile", user_path(current_user), class: "dropdown-item text-danger", method: :delete, form: { data: { turbo_confirm: 'Are you sure?' }} %>
           </ul>
         </div>
 

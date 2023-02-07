@@ -12,6 +12,7 @@
   </head>
 
   <body class="d-flex flex-column">
+  <%= javascript_include_tag "turbo", type: "module" %>
     <div id="page-content">
     <%= render 'layouts/messages' %>
     <%= yield %>
