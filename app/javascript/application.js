@@ -3,3 +3,7 @@ import "@hotwired/turbo-rails"
 import "controllers"
 import "bootstrap";
 //= require bootstrap
+
+//= require jquery
+//= require jquery_ujs
+//= require_tree
