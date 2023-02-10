@@ -12,7 +12,7 @@
           <div class="card-text text-start"><%= simple_format(@article.description) %></div>
           <% if logged_in? && (@article.user == current_user || current_user.admin?) %>
             <%= link_to "Edit", edit_article_path(@article), class: "btn btn-outline-info" %> 
-            <%= button_to "Delete", article_path(@article), data: {turbo_method: :delete, turbo_confirm: 'Sure?'}, class: "btn btn-outline-danger"  %>
+            <%= button_to "Delete", article_path(@article), class: "btn btn-outline-danger",  method: :delete, form: {data: {turbo_confirm: "Are you sure?"}} %>
           <% end %>
         </div>
         <div class="card-footer text-muted">
